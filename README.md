@@ -13,5 +13,5 @@ descent.
 
 Though the great majority of code in these files represents my work, a small amount does not since some
 utility functions were provided as part of the assignments.  For more detail on the nature of the 
-assignments and the context of the class, see the course webpage at:
+assignments, input files for these programs, and the context of the class, see the course webpage at:
 http://curtis.ml.cmu.edu/w/courses/index.php/Machine_Learning_with_Large_Datasets_10-605_in_Spring_2015

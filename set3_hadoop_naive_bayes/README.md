@@ -1,18 +1,8 @@
-This code, dsgd_mf.py, runs using Spark, Python 2.7, and the numpy package for Python.  Its purpose is
-to read in .csv data representing a sparse matrix of values (described more below) and factorize that
-data into two matrices.  It was written for HW 7 for the class 10-605 at Carnegie Mellon, Spring 2015,
-by me, Benjamin Steele, in April 2015.
+This code, written in Java, trains a Naive Bayes classifier to classify text passages into one of several possible document types using Hadoop MapReduce.  Part of a sample training document is shown below:
 
-To use this code, type the following command into the command line when in the code's folder:
+C11,C13,CCAT	 EnerTel, a group of utilities and cable tv companies which has applied for a new Dutch fixed telecoms licence, said on Monday its existing infrastructure could give it a strong advantage while the government comes to a decision.
 
-spark-submit dsgd_mf.py num_factors num_workers num_iterations beta_value lambda_value inputV_filepath outputW_filepath outputH_filepath
+where comma-delimited categories precede a tab and words used as features for the Naive Bayes classifier follow the tab.
 
-Here, num_factors represents the number of different factors you wish to use to represent the dataset
-after factorization, num_workers represents the number of different parallel jobs you wish to run to
-calculate the factorization, and beta and lambda are specific values governing the convergence rate and
-regularization of the stochastic gradient descent algorithm, respectively.
-
-The input filepath to the data is self-explanatory.  Data should be in a csv file, with the first and 
-second columns unique IDs and the third columns values for that specific ID pair.
-
-The factorized output matrices will be written to the output W and H filepaths, the last two arguments.
+Arguments, outputs, and formatting are defined as given in the assignment description:
+http://www.andrew.cmu.edu/user/amaurya/docs/10605/homework3.pdf
