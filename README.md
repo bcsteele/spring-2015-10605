@@ -1,18 +1,17 @@
-This code, dsgd_mf.py, runs using Spark, Python 2.7, and the numpy package for Python.  Its purpose is
-to read in .csv data representing a sparse matrix of values (described more below) and factorize that
-data into two matrices.  It was written for HW 7 for the class 10-605 at Carnegie Mellon, Spring 2015,
-by me, Benjamin Steele, in April 2015.
+This repository contains code written for Carnegie Mellon University's course 10-605, "Machine Learning 
+with Large Datasets," taught Spring 2015.  Three different assignments from the course are represented 
+in three separate subdirectories within this repository.  Each assignment was based around implementing
+and describing a machine learning algorithm in the context of a parallelized, memory-limited 
+environment.
 
-To use this code, type the following command into the command line when in the code's folder:
+The first subdirectory, set3_hadoop_naive_bayes, corresponds to a training a Naive Bayes classifier 
+using a Hadoop MapReduce implementation programmed in Java.  The second, 
+set5_distributed_logistic_regression, contains a memory-limited implementation of training a logistic 
+regression classifier using stochastic gradient descent.  The last, set7_spark_matrix_factorization,
+uses Apache Spark to factorize a sparse matrix in a distributed fashion using stochastic gradient 
+descent.
 
-spark-submit dsgd_mf.py num_factors num_workers num_iterations beta_value lambda_value inputV_filepath outputW_filepath outputH_filepath
-
-Here, num_factors represents the number of different factors you wish to use to represent the dataset
-after factorization, num_workers represents the number of different parallel jobs you wish to run to
-calculate the factorization, and beta and lambda are specific values governing the convergence rate and
-regularization of the stochastic gradient descent algorithm, respectively.
-
-The input filepath to the data is self-explanatory.  Data should be in a csv file, with the first and 
-second columns unique IDs and the third columns values for that specific ID pair.
-
-The factorized output matrices will be written to the output W and H filepaths, the last two arguments.
+Though the great majority of code in these files represents my work, a small amount does not since some
+utility functions were provided as part of the assignments.  For more detail on the nature of the 
+assignments and the context of the class, see the course webpage at:
+http://curtis.ml.cmu.edu/w/courses/index.php/Machine_Learning_with_Large_Datasets_10-605_in_Spring_2015
